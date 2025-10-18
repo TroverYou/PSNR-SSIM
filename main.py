@@ -6,7 +6,9 @@ from PSNR import calculate_psnr, calculate_ssim
 
 def main():
     # Replace with your image path
-    image_path = 'test_image5.jpg'
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    image_name = 'test_image1.jpg'
+    image_path = os.path.join(script_dir, image_name)
     
     try:
         # Create distorted images using existing functions
@@ -49,4 +51,5 @@ def main():
         print(f"An error occurred: {str(e)}")
 
 if __name__ == "__main__":
+
     main()
